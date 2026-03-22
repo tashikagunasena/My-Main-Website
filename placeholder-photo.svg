@@ -1,0 +1,30 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="160" y1="120" x2="1040" y2="1380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFDF8C"/>
+      <stop offset="0.52" stop-color="#FF9B3D"/>
+      <stop offset="1" stop-color="#FF7BB8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="200" y1="220" x2="1000" y2="1260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1200" height="1500" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" rx="88" fill="#17172F"/>
+  <circle cx="250" cy="240" r="190" fill="#FF9B3D" fill-opacity="0.45" filter="url(#blur)"/>
+  <circle cx="940" cy="320" r="210" fill="#60E0FF" fill-opacity="0.22" filter="url(#blur)"/>
+  <circle cx="620" cy="1180" r="240" fill="#FF7BB8" fill-opacity="0.2" filter="url(#blur)"/>
+  <rect x="70" y="70" width="1060" height="1360" rx="76" fill="url(#g2)" stroke="rgba(255,255,255,0.16)" stroke-width="4"/>
+  <rect x="110" y="110" width="980" height="1280" rx="64" fill="url(#g1)" fill-opacity="0.14" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="16 12"/>
+  <g opacity="0.82">
+    <circle cx="600" cy="600" r="188" fill="white" fill-opacity="0.18"/>
+    <circle cx="600" cy="535" r="92" fill="#FFF8EF" fill-opacity="0.55"/>
+    <path d="M415 860C440 745 516 689 600 689C684 689 760 745 785 860" stroke="#FFF8EF" stroke-opacity="0.52" stroke-width="38" stroke-linecap="round"/>
+    <path d="M414 857C446 775 516 739 600 739C684 739 754 775 786 857" stroke="#FFF8EF" stroke-opacity="0.25" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <text x="600" y="1210" text-anchor="middle" fill="#FFF8EF" fill-opacity="0.9" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">Add Your Photo Here</text>
+  <text x="600" y="1290" text-anchor="middle" fill="#FFF8EF" fill-opacity="0.68" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="500">Replace this placeholder later</text>
+</svg>
