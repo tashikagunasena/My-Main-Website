@@ -13,31 +13,39 @@
   --aqua: #60e0ff;
   --radius: 36px;
   --radius-lg: 44px;
+  /* More balanced colors */
+  --coral: #ff7b6b;
+  --teal: #4fc9e0;
+  --mint: #5cd6c0;
+  --lavender: #a78bff;
+  --peach: #ffb599;
 }
 
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
   background:
     radial-gradient(
       circle at top left,
-      rgba(255, 155, 61, 0.25),
+      rgba(255, 155, 61, 0.15),
       transparent 28%
     ),
     radial-gradient(
       circle at top right,
-      rgba(255, 123, 184, 0.18),
+      rgba(255, 123, 184, 0.12),
       transparent 24%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(96, 224, 255, 0.12),
+      rgba(96, 224, 255, 0.08),
       transparent 18%
     ),
     linear-gradient(180deg, #1a1330 0%, var(--bg) 50%, #0a0b16 100%);
@@ -53,13 +61,13 @@ body::before {
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.03),
       transparent 35%,
-      rgba(255, 255, 255, 0.03)
+      rgba(255, 255, 255, 0.02)
     ),
     radial-gradient(
       circle at 50% 0%,
-      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.04),
       transparent 30%
     );
   backdrop-filter: blur(0.5px);
@@ -86,6 +94,7 @@ body::before {
   pointer-events: none;
   animation: float 12s ease-in-out infinite;
 }
+
 .blob-1 {
   width: 240px;
   height: 240px;
@@ -93,6 +102,7 @@ body::before {
   top: -60px;
   left: -80px;
 }
+
 .blob-2 {
   width: 300px;
   height: 300px;
@@ -101,6 +111,7 @@ body::before {
   top: 20%;
   animation-delay: -3s;
 }
+
 .blob-3 {
   width: 260px;
   height: 260px;
@@ -109,6 +120,7 @@ body::before {
   bottom: -120px;
   animation-delay: -6s;
 }
+
 .blob-4 {
   width: 180px;
   height: 180px;
@@ -125,6 +137,26 @@ body::before {
   }
   50% {
     transform: translateY(-18px) scale(1.05);
+  }
+}
+
+@keyframes jellyPulse {
+  0%,
+  100% {
+    border-radius: 36px 44px 38px 48px;
+    transform: scale(1);
+  }
+  25% {
+    border-radius: 48px 38px 46px 34px;
+    transform: scale(1.02);
+  }
+  50% {
+    border-radius: 40px 50px 34px 46px;
+    transform: scale(0.98);
+  }
+  75% {
+    border-radius: 46px 36px 50px 40px;
+    transform: scale(1.01);
   }
 }
 
@@ -238,6 +270,38 @@ body::before {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 64px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.section:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.section:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.section:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.section:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.section:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.section:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero {
@@ -265,14 +329,25 @@ h3,
 p {
   margin-top: 0;
 }
+
 h1 {
   font-size: clamp(3rem, 8vw, 6.5rem);
   line-height: 0.95;
   margin: 14px 0 16px;
+  background: linear-gradient(135deg, var(--yellow), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 155, 61, 0.2);
 }
+
 h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--aqua), var(--orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .lede {
@@ -280,6 +355,19 @@ h2 {
   font-size: 1.08rem;
   line-height: 1.8;
   max-width: 62ch;
+  position: relative;
+  padding-left: 20px;
+}
+
+.lede::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: calc(100% - 16px);
+  background: linear-gradient(to bottom, var(--orange), var(--pink));
+  border-radius: 2px;
 }
 
 .hero-actions {
@@ -301,11 +389,33 @@ h2 {
     transform 0.2s ease,
     box-shadow 0.2s ease,
     filter 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .button:hover {
   transform: translateY(-3px) scale(1.03);
   filter: saturate(1.06);
+}
+
+.button:hover::after {
+  width: 300px;
+  height: 300px;
 }
 
 .primary {
@@ -344,6 +454,7 @@ h2 {
   display: block;
   font-size: 1.6rem;
 }
+
 .hero-stats span {
   color: var(--muted);
   font-size: 0.95rem;
@@ -431,6 +542,13 @@ h2 {
 .pill-row span {
   padding: 10px 14px;
   color: white;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.pill-row span:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .split {
@@ -453,6 +571,7 @@ h2 {
 .section-heading {
   margin-bottom: 18px;
 }
+
 .section-heading h2 {
   margin-top: 10px;
 }
@@ -478,20 +597,80 @@ h2 {
   filter: saturate(1.08);
 }
 
-@keyframes jellyPulse {
-  0%,
-  100% {
-    border-radius: 36px 44px 38px 48px;
-  }
-  25% {
-    border-radius: 48px 38px 46px 34px;
-  }
-  50% {
-    border-radius: 40px 50px 34px 46px;
-  }
-  75% {
-    border-radius: 46px 36px 50px 40px;
-  }
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 18px;
+  padding: 10px 0 30px;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 calc(25% - 14px);
+  min-width: 250px;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* so only buttons are clickable */
+  padding: 0 20px; /* move buttons outside cards */
+  z-index: 5;
+}
+
+.carousel-btn {
+  pointer-events: all;
+  width: 64px;
+  height: 64px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 155, 61, 0.35),
+    rgba(255, 123, 184, 0.25)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#prev-btn {
+  margin-left: -10px; /* move further left */
+}
+
+#next-btn {
+  margin-right: -10px; /* move further right */
 }
 
 .faq-grid,
@@ -505,12 +684,15 @@ h2 {
 .faq-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
 .cards-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+
 .certificate-layout {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+
 .contact-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -560,6 +742,7 @@ h2 {
 .contact-card h3 {
   margin-bottom: 10px;
 }
+
 .faq-item p,
 .project-card p,
 .certificate-group li,
@@ -577,10 +760,6 @@ h2 {
   text-decoration: none;
   font-weight: 700;
   padding: 10px 0 0;
-}
-
-.placeholder-link:hover {
-  text-decoration: underline;
 }
 
 .card-icon {
@@ -606,11 +785,17 @@ h2 {
 .certificate-group li {
   margin-bottom: 10px;
 }
+
 .certificate-group li a {
   color: var(--muted);
 }
+
 .certificate-group li a:hover {
   color: white;
+}
+
+.certificate-group h3 {
+  color: var(--teal) !important;
 }
 
 .language-wrap {
@@ -701,6 +886,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .carousel-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+
   .topbar {
     width: min(1180px, calc(100% - 20px));
     padding: 12px 14px;
@@ -759,6 +948,9 @@ h2 {
   .about-photo-placeholder {
     max-width: 240px;
   }
+  .carousel-item {
+    flex: 0 0 90%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -771,5 +963,11 @@ h2 {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .section {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
   }
 }
