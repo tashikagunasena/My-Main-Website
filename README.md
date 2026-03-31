@@ -49,22 +49,6 @@ My-Main-Website/
 - A modern web browser (Chrome, Firefox, Safari, or Edge)
 - Git (for cloning the repository)
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/tashikagunasena/My-Main-Website.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd My-Main-Website
-   ```
-
-3. Open `index.html` in your preferred browser to view locally.
-
----
-
 ## Deployment
 
 This website is hosted on **GitHub Pages**. Any changes pushed to the `main` branch will automatically deploy to the live site.
