@@ -13,7 +13,6 @@
   --aqua: #60e0ff;
   --radius: 36px;
   --radius-lg: 44px;
-  /* More balanced colors */
   --coral: #ff7b6b;
   --teal: #4fc9e0;
   --mint: #5cd6c0;
@@ -21,7 +20,9 @@
   --peach: #ffb599;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -135,6 +136,7 @@ body::before {
   100% {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-18px) scale(1.05);
   }
@@ -146,14 +148,17 @@ body::before {
     border-radius: 36px 44px 38px 48px;
     transform: scale(1);
   }
+
   25% {
     border-radius: 48px 38px 46px 34px;
     transform: scale(1.02);
   }
+
   50% {
     border-radius: 40px 50px 34px 46px;
     transform: scale(0.98);
   }
+
   75% {
     border-radius: 46px 36px 50px 40px;
     transform: scale(1.01);
@@ -179,6 +184,7 @@ body::before {
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-3px);
   }
@@ -278,21 +284,27 @@ body::before {
 .section:nth-child(2) {
   animation-delay: 0.1s;
 }
+
 .section:nth-child(3) {
   animation-delay: 0.2s;
 }
+
 .section:nth-child(4) {
   animation-delay: 0.3s;
 }
+
 .section:nth-child(5) {
   animation-delay: 0.4s;
 }
+
 .section:nth-child(6) {
   animation-delay: 0.5s;
 }
+
 .section:nth-child(7) {
   animation-delay: 0.6s;
 }
+
 .section:nth-child(8) {
   animation-delay: 0.7s;
 }
@@ -633,8 +645,8 @@ h2 {
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  pointer-events: none; /* so only buttons are clickable */
-  padding: 0 20px; /* move buttons outside cards */
+  pointer-events: none;
+  padding: 0 20px;
   z-index: 5;
 }
 
@@ -666,11 +678,11 @@ h2 {
 }
 
 #prev-btn {
-  margin-left: -10px; /* move further left */
+  margin-left: -10px;
 }
 
 #next-btn {
-  margin-right: -10px; /* move further right */
+  margin-right: -10px;
 }
 
 .faq-grid,
@@ -925,12 +937,15 @@ h2 {
   .section {
     padding: 46px 0;
   }
+
   .topbar {
     width: calc(100% - 20px);
   }
+
   .hero-stats {
     grid-template-columns: 1fr;
   }
+
   .hero-card,
   .panel,
   .faq-item,
@@ -942,12 +957,15 @@ h2 {
   .about-panel {
     padding: 18px;
   }
+
   h1 {
     font-size: 3rem;
   }
+
   .about-photo-placeholder {
     max-width: 240px;
   }
+
   .carousel-item {
     flex: 0 0 90%;
   }
@@ -957,6 +975,7 @@ h2 {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
