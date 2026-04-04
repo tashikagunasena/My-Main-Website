@@ -3,33 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ff9b3d" />
     <title>Tashi | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="Scripts/script.js" defer></script>
   </head>
   <body>
+    <div class="bg-noise"></div>
     <div class="bg-blobs blob-1"></div>
     <div class="bg-blobs blob-2"></div>
     <div class="bg-blobs blob-3"></div>
     <div class="bg-blobs blob-4"></div>
-    <div class="bg-noise"></div>
 
-    <header class="topbar glass">
-      <a class="brand" href="#home" aria-label="Tashi homepage">
-        <span class="brand-mark">T</span>
-        <span class="brand-text">
-          <strong>Tashi</strong>
-          <small>Jelly Portfolio</small>
-        </span>
+    <header class="topbar glass" id="home">
+      <a href="#home" class="brand">
+        <div class="brand-mark">T</div>
+        <div class="brand-text">Tashi<small>Jelly Portfolio</small></div>
       </a>
-
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav">
         <a href="#about">About</a>
         <a href="#questions">Questions</a>
         <a href="#projects">Projects</a>
@@ -39,10 +29,12 @@
       </nav>
     </header>
 
-    <main id="home">
-      <section class="hero section">
-        <div class="hero-copy">
-          <p class="eyebrow">Liquid glass · Tropical orange · Jelly motion</p>
+    <main>
+      <section class="section hero" id="about">
+        <div>
+          <span class="eyebrow"
+            >Liquid glass · Tropical orange · Jelly motion</span
+          >
           <h1>Hi, I’m Tashi.</h1>
           <p class="lede">
             I can create modern websites, manage content, and build clean visual
@@ -53,61 +45,45 @@
             <a href="#projects" class="button primary">See Projects</a>
             <a href="#contact" class="button secondary">Contact Me</a>
           </div>
-
           <div class="hero-stats">
-            <div class="stat-card jelly-card">
-              <strong class="stat">4</strong>
-              <span class="stat">Certificate groups</span>
+            <div class="stat-card">
+              <strong>4</strong><span>Certificate groups</span>
             </div>
-            <div class="stat-card jelly-card">
-              <strong class="stat">C2</strong>
-              <span class="stat">English level</span>
+            <div class="stat-card">
+              <strong>C2</strong><span>English level</span>
             </div>
-            <div class="stat-card jelly-card">
-              <strong class="stat">8</strong>
-              <span class="stat">Different Projects</span>
+            <div class="stat-card">
+              <strong>8</strong><span>Different Projects</span>
             </div>
           </div>
         </div>
-
         <div class="hero-card glass jelly-card">
-          <div class="avatar-shell">
-            <div class="avatar">T</div>
-          </div>
-          <h2>Fluid. Fresh. Friendly.</h2>
+          <div class="avatar-shell"><div class="avatar">T</div></div>
           <p>
-            Inspired by Oppo ColorOS, Apple Liquid Glass, and ZorinOS jelly
-            motion, with a tropical orange palette and soft gradients.
+            Fluid. Fresh. Friendly.<br />Inspired by Oppo ColorOS, Apple Liquid
+            Glass, and ZorinOS jelly motion, with a tropical orange palette and
+            soft gradients.
           </p>
           <div class="pill-row">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Content</span>
+            <span>HTML</span><span>CSS</span><span>JavaScript</span
+            ><span>Content</span>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section split about-wrap">
+      <section class="section split" id="who">
         <div class="about-rail">
           <div class="section-heading">
-            <p class="eyebrow">About Me</p>
-            <h2 id="who">Who I am</h2>
+            <span class="stat">T</span>
+            <h2>About Me</h2>
+            <h3>Who I am</h3>
           </div>
-
           <div class="about-photo-frame">
-            <img
-              style="margin-left: 50px"
-              class="about-photo-placeholder"
-              src="Assets/pfp.webp"
-              alt="Placeholder image for your photo"
-            />
+            <div class="about-photo-placeholder"></div>
+            <p class="photo-caption">Your photo here</p>
           </div>
         </div>
-        <div
-          style="margin-top: 150px"
-          class="glass panel jelly-card about-panel"
-        >
+        <div class="about-panel glass">
           <div class="about-text">
             <p>
               I am a junior web designer with a strong foundation in HTML, CSS,
@@ -134,196 +110,125 @@
         </div>
       </section>
 
-      <section id="questions" class="section">
+      <section class="section" id="questions">
         <div class="section-heading">
-          <p class="eyebrow">Questions</p>
-          <h2>Quick answers</h2>
+          <h2>Questions</h2>
+          <p class="lede">Quick answers</p>
         </div>
-
         <div class="faq-grid">
-          <article class="glass faq-item jelly-card">
+          <div class="faq-item glass jelly-card">
             <h3 class="question">What services do you offer?</h3>
             <p>
               Web design, content creation, and basic photo/video editing with a
               modern visual style.
             </p>
-          </article>
-          <article class="glass faq-item jelly-card">
+          </div>
+          <div class="faq-item glass jelly-card">
             <h3 class="question">What is your design style?</h3>
             <p>
               Soft, glassy, bouncy, and polished — with orange gradients and a
               tropical feel.
             </p>
-          </article>
-          <article class="glass faq-item jelly-card">
+          </div>
+          <div class="faq-item glass jelly-card">
             <h3 class="question">How do you work?</h3>
             <p>
               I keep a logical process, stay punctual, and focus on clean
               outcomes that are easy to use.
             </p>
-          </article>
-          <article class="glass faq-item jelly-card">
+          </div>
+          <div class="faq-item glass jelly-card">
             <h3 class="question">What are your technical skills?</h3>
             <p>
               HTML, CSS, JavaScript, simple editing, Microsoft Office, and
               simple graphic design.
             </p>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <section class="section" id="projects">
         <div class="section-heading">
-          <p class="eyebrow">Project Showcase</p>
-          <h2>Featured work</h2>
+          <h2>Project Showcase</h2>
+          <p class="lede">Featured work</p>
         </div>
-
         <div class="carousel-container">
           <div class="carousel-wrapper" id="projects-carousel">
-            <!-- Project 1 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">🛒</div>
-                <h3>My twist on Amazon.com</h3>
-                <p>
-                  Fully made with HTML, CSS and JavaScript + my personal style.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="https://tashikagunasena.github.io/My-version-of-Amazon.com/"
-                  aria-label="View Amazon project"
-                  >Click here to see ❤️</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">🛒</div>
+              <h3>My twist on Amazon.com</h3>
+              <p>
+                Fully made with HTML, CSS and JavaScript + my personal style.
+              </p>
+              <a
+                href="https://tashikagunasena.github.io/My-version-of-Amazon.com/"
+                >Click here to see ❤️</a
+              >
             </div>
-
-            <!-- Project 2 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">🛖</div>
-                <h3>My twist on Damro.com</h3>
-                <p>
-                  Simple editing, cutting, and polishing for smooth short-form
-                  content.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View Damro project"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">🛖</div>
+              <h3>My twist on Damro.com</h3>
+              <p>
+                Simple editing, cutting, and polishing for smooth short-form
+                content.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
-
-            <!-- Project 3 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">📸</div>
-                <h3>Photo Editing</h3>
-                <p>
-                  Clean visuals, light retouching, and content-friendly image
-                  presentation.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View photo editing work"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">📸</div>
+              <h3>Photo Editing</h3>
+              <p>
+                Clean visuals, light retouching, and content-friendly image
+                presentation.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
-
-            <!-- Project 4 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">🎨</div>
-                <h3>Graphic Design</h3>
-                <p>
-                  Simple graphic interfaces and layout ideas with a modern
-                  tropical palette.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View graphic design work"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">🎨</div>
+              <h3>Graphic Design</h3>
+              <p>
+                Simple graphic interfaces and layout ideas with a modern
+                tropical palette.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
-
-            <!-- Project 5 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">📱</div>
-                <h3>Mobile App UI</h3>
-                <p>
-                  Designed intuitive mobile interfaces with focus on user
-                  experience and accessibility.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View mobile app design"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">📱</div>
+              <h3>Mobile App UI</h3>
+              <p>
+                Designed intuitive mobile interfaces with focus on user
+                experience and accessibility.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
-
-            <!-- Project 6 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">📰</div>
-                <h3>Blog Website</h3>
-                <p>
-                  Created a responsive blog platform with clean typography and
-                  efficient content management.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View blog project"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">📰</div>
+              <h3>Blog Website</h3>
+              <p>
+                Created a responsive blog platform with clean typography and
+                efficient content management.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
-
-            <!-- Project 7 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">📊</div>
-                <h3>Data Dashboard</h3>
-                <p>
-                  Built an interactive dashboard for visualizing analytics with
-                  charts and real-time updates.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View dashboard project"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">📊</div>
+              <h3>Data Dashboard</h3>
+              <p>
+                Built an interactive dashboard for visualizing analytics with
+                charts and real-time updates.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
-
-            <!-- Project 8 -->
-            <div class="carousel-item">
-              <article class="glass project-card jelly-card">
-                <div class="card-icon">🎮</div>
-                <h3>Game Interface</h3>
-                <p>
-                  Designed UI elements and menus for an indie browser-based game
-                  with vibrant visuals.
-                </p>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="View game interface"
-                  >Add project link here</a
-                >
-              </article>
+            <div class="carousel-item project-card glass jelly-card">
+              <div class="card-icon">🎮</div>
+              <h3>Game Interface</h3>
+              <p>
+                Designed UI elements and menus for an indie browser-based game
+                with vibrant visuals.
+              </p>
+              <a href="#">Add project link here</a>
             </div>
           </div>
-
           <div class="carousel-nav">
             <button class="carousel-btn" id="prev-btn">←</button>
             <button class="carousel-btn" id="next-btn">→</button>
@@ -331,159 +236,91 @@
         </div>
       </section>
 
-      <section id="certificates" class="section">
+      <section class="section" id="certificates">
         <div class="section-heading">
-          <p class="eyebrow">Certificate Showcase</p>
-          <h2>Four certificate groups</h2>
+          <h2>Certificate Showcase</h2>
+          <p class="lede">Four certificate groups</p>
         </div>
-
         <div class="certificate-layout">
-          <article class="glass certificate-group jelly-card">
-            <h3 style="color: orange">AI</h3>
+          <div class="certificate-group glass jelly-card">
+            <h3>AI</h3>
             <ul>
               <li>
                 <a
-                  class="placeholder-link"
                   href="https://drive.google.com/drive/folders/1suUNY_4mlEJHkgsB6UCDD0t_sX8YBtGK"
-                  aria-label="Google AI certificates"
                   >My Google Ai certificates</a
                 >
               </li>
               <li>
                 <a
-                  class="placeholder-link"
                   href="https://drive.google.com/drive/folders/1Z4xItBVrtkKMm9wx77ieela84WHtii3w"
-                  aria-label="AI/ML certificates"
                   >My Al/ML Slit certificates</a
                 >
               </li>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="AI tools certificate"
-                  >Add AI tools certificate</a
-                >
-              </li>
+              <li><a href="#">Add AI tools certificate</a></li>
             </ul>
-          </article>
-
-          <article class="glass certificate-group jelly-card">
-            <h3 style="color: orange">Web Dev</h3>
+          </div>
+          <div class="certificate-group glass jelly-card">
+            <h3>Web Dev</h3>
             <ul>
               <li>
                 <a
-                  class="placeholder-link"
                   href="https://drive.google.com/drive/folders/1acRqyLMImKwSJ7qJhyPpkHGXhvOW44Ng"
-                  aria-label="Moratuwa University certificates"
                   >My Moratuwa Uni certificates</a
                 >
               </li>
               <li>
                 <a
-                  class="placeholder-link"
-                  href="https://drive.google.com/drive/folders/1lgkCcCIjphWhudDk8iyf-aMNBhZqA_Iw"
-                  aria-label="London University certificates"
+                  href="https://drive.google.com/drive/folders/1lgkCcCIjphWhudD8iyf-aMNBhZqA_Iw"
                   >My London Uni certificates</a
                 >
               </li>
               <li>
                 <a
-                  class="placeholder-link"
                   href="https://drive.google.com/drive/folders/1OkuePAlc_pIiHXo_5LsIYUyOqiS3v64_"
-                  aria-label="Michigan University certificates"
                   >My Michigan Uni certificates</a
                 >
               </li>
               <li>
                 <a
-                  class="placeholder-link"
                   href="https://drive.google.com/drive/folders/18xvHogGhuhIcBDTIIf5R-8WE69wHwev1"
-                  aria-label="Johns Hopkins certificates"
                   >My Johns-Hopkins Uni certificates</a
                 >
               </li>
               <li>
                 <a
-                  class="placeholder-link"
                   href="https://drive.google.com/drive/folders/1aeTYkSyvH8RwgKfEFKXkfsiZJ0q-WXpC"
-                  aria-label="Other certificates"
                   >My DP Education and other certificates</a
                 >
               </li>
             </ul>
-          </article>
-
-          <article class="glass certificate-group jelly-card">
-            <h3 style="color: orange">Content Management</h3>
+          </div>
+          <div class="certificate-group glass jelly-card">
+            <h3>Content Management</h3>
             <ul>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="Digital content certificate"
-                  >Add digital content certificate</a
-                >
-              </li>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="Media workflow certificate"
-                  >Add media workflow certificate</a
-                >
-              </li>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="Planning certificate"
-                  >Add planning / communication certificate</a
-                >
-              </li>
+              <li><a href="#">Add digital content certificate</a></li>
+              <li><a href="#">Add media workflow certificate</a></li>
+              <li><a href="#">Add planning / communication certificate</a></li>
             </ul>
-          </article>
-
-          <article class="glass certificate-group jelly-card">
-            <h3 style="color: orange">Others</h3>
+          </div>
+          <div class="certificate-group glass jelly-card">
+            <h3>Others</h3>
             <ul>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="Extra learning certificate"
-                  >Add extra learning certificate</a
-                >
-              </li>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="Productivity certificate"
-                  >Add productivity certificate</a
-                >
-              </li>
-              <li>
-                <a
-                  class="placeholder-link"
-                  href="#"
-                  aria-label="Other certificate"
-                  >Add any other certificate</a
-                >
-              </li>
+              <li><a href="#">Add extra learning certificate</a></li>
+              <li><a href="#">Add productivity certificate</a></li>
+              <li><a href="#">Add any other certificate</a></li>
             </ul>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="language" class="section split language-wrap">
-        <div>
-          <div class="section-heading">
-            <p class="eyebrow">Language Showcase</p>
-            <h2>English proficiency</h2>
-          </div>
-
-          <div class="glass language-card jelly-card">
+      <section class="section" id="language">
+        <div class="section-heading">
+          <h2>Language Showcase</h2>
+          <p class="lede">English proficiency</p>
+        </div>
+        <div class="language-wrap split">
+          <div class="language-card glass jelly-card">
             <div class="lang-score">C2</div>
             <div>
               <h3>Fluent English communication</h3>
@@ -492,84 +329,78 @@
                 speaking. I use clear, precise communication for content,
                 websites, and professional work.
               </p>
-              <a
-                class="placeholder-link"
-                href="#"
-                aria-label="English proficiency certificate"
+              <a href="#" class="placeholder-link"
                 >Add English proficiency certificate</a
               >
             </div>
           </div>
-        </div>
-
-        <div class="glass sub-section jelly-card">
-          <h3>English certificates</h3>
-          <p>
-            Place your English-related certificates or proof of proficiency
-            here.
-          </p>
-          <div class="mini-cards">
-            <a
-              href="https://drive.google.com/file/d/1j4nN60cUe4MA88R3kkSt0B5L6WDd1m0W/view?usp=drive_link"
-              class="chip-link"
-              >EFSET C2 certificate</a
-            >
-            <a
-              href="https://drive.google.com/drive/folders/16J2sgNeNH3O7TQUR_atjQD8lHIzVqGO8"
-              class="chip-link"
-              >Naples Federico II Uni C1 certificate</a
-            >
-            <a
-              href="https://drive.google.com/drive/folders/1llvMN5QAP-TP25G3HlAhLZ1ZW2Rj0PbU"
-              class="chip-link"
-              >California Uni Advance English certificates</a
-            >
-            <a
-              href="https://drive.google.com/drive/folders/1dRNxvQID62QcyIZug3FSU5RRGwHW-O5q?usp=drive_link"
-              class="chip-link"
-              >FCC English Certificates</a
-            >
+          <div class="certificate-group glass jelly-card sub-section">
+            <h3>English certificates</h3>
+            <p>
+              Place your English-related certificates or proof of proficiency
+              here.
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1j4nN60cUe4MA88R3kkSt0B5L6WDd1m0W/view?usp=drive_link"
+                  >EFSET C2 certificate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/16J2sgNeNH3O7TQUR_atjQD8lHIzVqGO8"
+                  >Naples Federico II Uni C1 certificate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/1llvMN5QAP-TP25G3HlAhLZ1ZW2Rj0PbU"
+                  >California Uni Advance English certificates</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/1dRNxvQID62QcyIZug3FSU5RRGwHW-O5q?usp=drive_link"
+                  >FCC English Certificates</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section contact-section">
+      <section class="section contact-section" id="contact">
         <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s create something amazing</h2>
+          <h2>Contact</h2>
+          <p class="lede">Let’s create something amazing</p>
         </div>
-
         <div class="contact-grid">
-          <div class="glass contact-card jelly-card">
+          <div class="contact-card glass jelly-card">
             <h3>Get in touch</h3>
             <p>
               Ready for web design, content, or a creative project with a fresh
               tropical feel.
             </p>
             <div class="contact-links">
-              <a href="tel:+94721934249">+94 72 193 4249</a>
-              <a href="mailto:tashikagunasena@gmail.com"
+              <a href="tel:+94721934249">+94 72 193 4249</a
+              ><a href="mailto:tashikagunasena@gmail.com"
                 >tashikagunasena@gmail.com</a
               >
             </div>
           </div>
-
-          <div class="glass contact-card jelly-card">
+          <div class="contact-card glass jelly-card">
             <h3>Availability</h3>
             <p>
               Anytime — let’s talk and build something polished, modern, and
               visually appetizing.
             </p>
-            <div class="contact-note">Location: Sri Lanka</div>
+            <p class="contact-note">Location: Sri Lanka</p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2026 Tashi. All rights reserved.</p>
-    </footer>
-
-    <script src="Scripts/script.js"></script>
+    <footer class="footer">© 2026 Tashi. All rights reserved.</footer>
   </body>
 </html>
