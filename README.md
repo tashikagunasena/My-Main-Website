@@ -34,8 +34,8 @@ This repository contains the source code for my official personal portfolio webs
 ```
 My-Main-Website/
 ├── index.html          # Main HTML file
-├── css/                # Stylesheets
-├── js/                 # JavaScript files
+├── Css/                # Stylesheets
+├── Scripts/                 # JavaScript files
 ├── assets/             # Images & media files
 └── README.md           # Documentation
 ```
